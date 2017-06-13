@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Log Lesson</h1>
+
+<form method="post">
+    <label>
+        <div>teacher</div>
+        <select name="teacher">
+                {% for t in teachers %}
+                <option value="{{t.teacher}}">{{ t.teacher }}</option>
+                {% endfor %}
+        </select>
+    </label>
+    <label>
+        <div>student</div>
+        <select name="student">
+                {% for s in students %}
+                <option value="{{s.student}}">{{ s.student }}</option>
+                {% endfor %}
+        </select>
+    </label>
+    <label>
+        <div>date of lesson</div>
+        <input type="date" id="lessondate" name="lessondate" value="{{lessondate}}">
+    </label>
+    <label>
+        <div>reason</div>
+        <select name="reason">
+            <option value="competition">competition</option>
+            <option value="recreation">recreation</option>
+            <option value="wedding">wedding</option>
+            <option value="other">other</option>
+        </select>  
+    </label>
+    <label>
+        <div>comments</div>
+        <textarea name="comment">{{comment}}</textarea>
+    </label>
+    <div class="error">{{ error }}</div>
+    <input type="submit">
+
+</form>
+{% endblock %}

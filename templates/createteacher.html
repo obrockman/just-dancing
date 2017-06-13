@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Create Teacher<h1>
+
+    <form method="post">
+        <label>
+            <div>teacher</div>
+            <input type="text" name="teacher" value="{{teacher}}">
+        </label>
+        <label>
+            <div>email</div>
+            <input type="email" name="temail" value="{{temail}}">
+        </label>
+        <label>
+            <div>phone number</div>
+            <input type="text" name="tphone" value="{{tphone}}">
+        </label>
+        <label>
+            <div>specialty</div>
+            <input type="text" name="specialty" value="{{specialty}}">
+        </label>
+        <div class="error">{{ error }}</div>
+        <input type="submit">
+    </form> 
+
+{% endblock %}

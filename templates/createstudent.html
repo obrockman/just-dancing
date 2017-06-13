@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Create Student<h1>
+
+    <form method="post">
+        <label>
+            <div>student</div>
+            <input type="text" name="student" value="{{student}}">
+        </label>
+        <label>
+            <div>email</div>
+            <input type="email" name="semail" value="{{semail}}">
+        </label>
+        <label>
+            <div>phone number</div>
+            <input type="text" name="sphone" value="{{sphone}}">
+        </label>
+        <label>
+            <div>start date</div>
+            <input type="date" name="startdate" value="{{startdate}}">
+        </label>
+        <div class="error">{{ error }}</div>
+        <input type="submit">
+    </form> 
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>All Teachers</h1> 
+    </div>
+
+{% for t in teachers %}
+
+<h2><a href="/teacher/{{ t.key().id() }}">{{ t.teacher }}</a></h2>
+
+{% endfor %} 
+
+{% endblock %}
